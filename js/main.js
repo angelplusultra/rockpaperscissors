@@ -12,7 +12,8 @@ function game() {
 function playRound() {
   const playerSelection = playerChoice();
   const computerSelection = computerChoice();
-  console.log(computerSelection)
+  console.log("Player chose " + playerSelection)
+  console.log("Computer chose " + computerSelection)
   const winner = checkWinner(playerSelection, computerSelection)
   console.log(winner);
 }
@@ -61,9 +62,9 @@ function checkWinner(choiceP, choiceC) {
     (choiceP === "paper" && choiceC == "rock") ||
     (choiceP === "scissors" && choiceC =="paper")
   ) {
-    return "Player";
+    return "Player Wins!";
   } else {
-      return "Computer"
+      return "Computer Wins!"
   }
 }
-game();
+
